@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>회원가입</h1>
+<form action="VC" id="myForm">
+필수 입력 : <input required="required" >
+<hr>
+글자 수 : <input maxlength="5">
+<hr>
+<button>가입</button> 
+</form>
+
+
+</body>
+</html>

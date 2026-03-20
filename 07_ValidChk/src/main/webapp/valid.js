@@ -1,0 +1,74 @@
+//검사 로직 정리하기 (lib)
+//라이브러리화->도구를 만든다는 뜻 json, cos, ojdbc, lombok, ...
+
+//일반적으로 유효성 검사하는 것들
+//함수형태로 정리해서 필요할 때 사이트마다 맞춰쓰게
+
+//문제가 있으면 true, 없으면 false
+//<input>을 넣으면
+//거기에 글자가 없으면 true, 있으면 false
+function isEmpty(input) {
+    return !input.value;
+}
+//<input>, 글자수를 넣으면
+//
+function lessThan(input, len) {
+    return input.value.length < len;
+}
+//<input>을 넣어서
+//값이 숫자가 아니면 true 아니면 false
+function isNotNumber(input) {
+    return isNaN(input.value);
+}
+//test
+//<input> 2개 비번확인
+//같지않으면 true, 같으면 false
+function notEquals(password, password2) {
+    return password.value != (password2.value);
+}
+//<input>
+//한글이나 특수문자가 있으면 true, 아니면 false
+
+//id, email (@._)
+function containKR(input) {
+    let ok = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM@._";
+    for (let i = 0;i < input.value.length;i++) {
+        if (ok.indexOf(input.value[i]) == -1) {
+            return true;
+        }
+    }
+}
+
+//<input>, 문자열 세트를 넣으면..
+//그 세트가 포함 안되어 있으면 true, 아니면 false
+function notContains(input, set){
+	for(let i = 0; i<set.length; i++){
+		if(input.value.indexOf(set[i])!=-1){
+			return false;
+		}
+	}	
+	return true;
+}
+//<input>
+//파일 타입검사를 하고 싶음
+//jpg만 허용시키고 싶을 때 
+//mp4 x
+function isNotType(input, type){
+	type = "."+type;
+	return input.value.indexOf(type) == -1; 
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 정보 입력</title>
+<style>
+    /* 배경 및 기본 폰트 */
+    body {
+        font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0;
+        margin: 0;
+    }
+
+    /* 각 폼을 감싸는 카드 스타일 */
+    form {
+        background: white;
+        padding: 25px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        width: 400px;
+        border: 1px solid #eee;
+        transition: transform 0.2s;
+    }
+
+    form:hover {
+        transform: translateY(-3px);
+    }
+
+    /* 라벨 텍스트 스타일 */
+    label, span {
+        font-weight: 600;
+        color: #495057;
+        margin-right: 10px;
+    }
+
+    /* 입력 필드 공통 스타일 (나이, 셀렉트박스) */
+    input[type="number"], select {
+        padding: 8px 12px;
+        border: 1px solid #ced4da;
+        border-radius: 6px;
+        outline: none;
+        font-size: 14px;
+    }
+
+    input[type="number"]:focus, select:focus {
+        border-color: #4dabf7;
+    }
+
+    /* 체크박스 영역 스타일 */
+    .checkbox-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    .checkbox-item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 14px;
+        color: #495057;
+    }
+
+    .checkbox-item input {
+        margin-right: 5px;
+    }
+
+    /* 버튼 스타일 */
+    button {
+        float: right; /* 버튼을 오른쪽으로 배치 */
+        background-color: #4dabf7;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    button:hover {
+        background-color: #339af0;
+    }
+
+    /* float 해제용 (버튼이 폼 밖으로 나가지 않게 함) */
+    form::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+</style>
+</head>
+<body>
+
+    <form action="say_hi.jsp">
+        <span>나이</span>
+        <input name="age" type="number" required placeholder="숫자만 입력">
+        <button type="submit">확인</button>
+    </form>
+
+    <form action="addr_output.jsp">
+        <span>지역</span>
+        <select name="addr">
+            <option>서울</option>
+            <option>경주</option>
+            <option>부산</option>
+        </select>
+        <button type="submit">확인</button>
+    </form>
+
+    <form action="sport_output.jsp">
+        <span>취미 스포츠</span>
+        <div class="checkbox-group">
+            <label class="checkbox-item"><input type="checkbox" name="sport" value="soccer"> 축구</label>
+            <label class="checkbox-item"><input type="checkbox" name="sport" value="basketball"> 농구</label>
+            <label class="checkbox-item"><input type="checkbox" name="sport" value="badminton"> 배드민턴</label>
+        </div>
+        <button type="submit" style="margin-top: 15px;">확인</button>
+    </form>
+
+</body>
+</html>

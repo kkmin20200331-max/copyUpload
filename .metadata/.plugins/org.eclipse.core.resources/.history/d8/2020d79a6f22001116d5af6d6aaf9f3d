@@ -1,0 +1,6 @@
+const i1El = document.querySelector("#i1");
+const i2El = document.querySelector("#i2");
+const i3El = document.querySelector("#i3");
+const i4El = document.querySelector("#i4");
+const i5El = document.querySelector("#i5");
+const i6El = document.querySelector("#i6");

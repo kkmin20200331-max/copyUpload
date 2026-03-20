@@ -1,0 +1,39 @@
+function call() {
+    const i1El = document.querySelector("#i1");
+    const i2El = document.querySelector("#i2");
+    const i3El = document.querySelector("#i3");
+    const i4El = document.querySelector("#i4");
+    const i5El = document.querySelector("#i5");
+    const i6El = document.querySelector("#i6");
+
+
+    if (isEmpty(i1El) || lessThan(i1El,5)) {
+        alert('입력 조건을 확인해주세요!');
+        i1El.focus();
+        return;
+    }
+	
+	
+	if(lessThan(i2El,3)){
+		alert('글자 수 오류!');
+		i2El.focus();
+		return;
+	}
+	
+	if(isNotNumber(i5El)||isEmpty(i5El)){
+		alert('입력 조건을 확인해주세요!')
+		i5El.focus();
+		return;
+	}
+	if(notEquals(i3El,i4El)){
+		alert('비밀번호가 같지 않습니다.')
+		i4El.focus();
+		return;
+	}
+		
+	
+
+
+    document.querySelector("#myForm").submit();
+
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="valid.js"></script>
+<script type="text/javascript" src="siteChk.js"></script>
+
+
+</head>
+<body>
+<h1>회원가입</h1>
+<form action="VC" id="myForm">
+필수 입력 : <input id="i1" placeholder="필수, 5자 이상, 한글x">
+<hr>
+글자 수 : <input id="i2" placeholder="3자 이상, 10글자 까지">
+<hr>
+비밀번호 : <input id="i3" placeholder="5글자 이상, 대문자,숫자 포함">
+<hr>
+비밀번호 확인 : <input id="i4" placeholder="비밀번호 재확인">
+<hr>
+숫자 : <input id="i5" placeholder="숫자만, 공백x">
+<hr>
+파일 : <input type="file" id="i6">
+<hr>
+<button>가입</button> 
+</form>
+
+
+</body>
+</html>

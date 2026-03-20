@@ -1,0 +1,27 @@
+function call() {
+    const i1El = document.querySelector("#i1");
+    const i2El = document.querySelector("#i2");
+    const i3El = document.querySelector("#i3");
+    const i4El = document.querySelector("#i4");
+    const i5El = document.querySelector("#i5");
+    const i6El = document.querySelector("#i6");
+
+
+    if (isEmpty(i1El)) {
+        alert('필수 입력!');
+        i1El.focus();
+        return;
+    }
+	
+	
+	if(leesThan(i2El,3)){
+		alert('글자 수 오류!');
+		i2El.focus();
+		return;
+	}
+	
+
+
+    document.querySelector("#myForm").submit();
+
+}
